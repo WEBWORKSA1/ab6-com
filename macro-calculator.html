@@ -1,0 +1,41 @@
+---
+layout: default
+title: "Calorie & Macro Calculator for Abs (TDEE + Protein Targets) | AB6"
+description: "Calculate your maintenance calories (TDEE), fat-loss calorie target and protein, carb, fat and fibre macros — built for getting lean enough to see abs."
+canonical: "https://ab6.com/macro-calculator.html"
+robots: "index,follow,max-image-preview:large"
+og_type: "website"
+body_attr: ""
+scripts: "<script src=\"assets/js/data.js\" defer></script><script src=\"assets/js/app.js\" defer></script><script src=\"assets/js/tools.js\" defer></script>"
+ld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebPage\", \"name\": \"Calorie & Macro Calculator for Abs (TDEE + Protein Targets) | AB6\", \"description\": \"Calculate your maintenance calories (TDEE), fat-loss calorie target and protein, carb, fat and fibre macros — built for getting lean enough to see abs.\", \"url\": \"https://ab6.com/macro-calculator.html\", \"isPartOf\": {\"@type\": \"WebSite\", \"name\": \"AB6.com\", \"url\": \"https://ab6.com\"}}</script><script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"FAQPage\", \"mainEntity\": [{\"@type\": \"Question\", \"name\": \"How big should my calorie deficit be to get abs?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"A deficit of 15–25% below maintenance is a common, sustainable range. It typically produces about 0.5–1% body-weight loss per week while protecting muscle if protein and strength training are in place.\"}}, {\"@type\": \"Question\", \"name\": \"How much protein do I need to keep muscle while cutting?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"Research suggests around 1.6–2.2 g per kg of body weight per day, with leaner people in a deficit often benefiting from the higher end.\"}}, {\"@type\": \"Question\", \"name\": \"Should I use Katch-McArdle or Mifflin-St Jeor?\", \"acceptedAnswer\": {\"@type\": \"Answer\", \"text\": \"If you know your body fat reasonably well, Katch-McArdle (based on lean mass) can be more accurate. Otherwise Mifflin-St Jeor is a well-validated default. Both are starting points — adjust from real-world weekly averages.\"}}]}</script>"
+---
+{% raw %}
+<section class="phero"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="calculators.html">Tools</a> / Macros</nav><div class="eyebrow">Calculator</div><h1>Calorie &amp; macro calculator</h1><p class="lead">Your daily calorie target and protein-first macros for getting lean — without crash dieting.</p></div></section>
+<section><div class="wrap layout"><div>
+ <div class="card">
+  <div class="unit-toggle" data-for="macroCalc" role="group" aria-label="Units"><button type="button" class="on" data-units="metric">Metric</button><button type="button" data-units="imperial">Imperial</button></div>
+  <form id="macroCalc" class="form" data-units="metric">
+   <div><label>Sex <span class="faint small">(formulas differ)</span></label><div class="choices"><label class="choice"><input type="radio" name="sex" value="m" required checked><span>Male</span></label><label class="choice"><input type="radio" name="sex" value="f" required><span>Female</span></label></div></div>
+   <div class="row"><div><label for="m-age">Age</label><input id="m-age" name="age" type="number" min="16" max="90" required></div>
+   <div><label for="m-h">Height (<span data-m="cm" data-i="in">cm</span>)</label><input id="m-h" name="height" type="number" step="0.1" required inputmode="decimal"></div></div>
+   <div class="row"><div><label for="m-w">Weight (<span data-m="kg" data-i="lb">kg</span>)</label><input id="m-w" name="weight" type="number" step="0.1" required inputmode="decimal"></div>
+   <div><label for="m-bf">Body fat % <span class="faint small">optional</span></label><input id="m-bf" name="bodyfat" type="number" step="0.1" min="3" max="60" inputmode="decimal"></div></div>
+   <div><label for="m-act">Activity level</label><select id="m-act" name="activity" required>
+    <option value="1.2">Sedentary — desk job, little exercise</option><option value="1.375">Light — 1–3 workouts/week</option>
+    <option value="1.55" selected>Moderate — 3–5 workouts/week</option><option value="1.725">Very active — 6–7 workouts/week</option><option value="1.9">Athlete — hard training + active job</option></select></div>
+   <div><label for="m-goal">Goal</label><select id="m-goal" name="goal">
+    <option value="-0.2" selected>Fat loss — moderate (−20%)</option><option value="-0.25">Fat loss — aggressive (−25%)</option><option value="-0.1">Slow cut (−10%)</option>
+    <option value="0">Maintain / recomposition</option><option value="0.1">Lean muscle gain (+10%)</option></select></div>
+   <button class="btn btn-primary" type="submit">Calculate my targets</button>
+  </form>
+  <div id="macroOut" class="result" hidden aria-live="polite"></div>
+ </div>
+ <div class="ad-slot" data-slot="inContent"></div>
+ <article class="prose" style="margin-top:30px">
+  <h2>The method</h2>
+  <p><b>BMR</b> uses Mifflin-St Jeor by default, or Katch-McArdle when you enter body fat. <b>TDEE</b> multiplies BMR by your activity factor. Your <b>target</b> applies your goal adjustment, with a safety floor so the deficit never gets reckless.</p>
+  <p><b>Macros:</b> protein is set first (2.0 g/kg when cutting, 1.8 g/kg otherwise — within the 1.6–2.2 g/kg range supported by <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Morton+2018+protein+supplementation+meta-analysis" target="_blank" rel="noopener">meta-analysis research</a>), fat at ~25% of calories (never below 0.6 g/kg) and carbohydrates fill the rest to fuel training.</p>
+  <h2>FAQ</h2><details><summary>How big should my calorie deficit be to get abs?</summary><div><p>A deficit of 15–25% below maintenance is a common, sustainable range. It typically produces about 0.5–1% body-weight loss per week while protecting muscle if protein and strength training are in place.</p></div></details><details><summary>How much protein do I need to keep muscle while cutting?</summary><div><p>Research suggests around 1.6–2.2 g per kg of body weight per day, with leaner people in a deficit often benefiting from the higher end.</p></div></details><details><summary>Should I use Katch-McArdle or Mifflin-St Jeor?</summary><div><p>If you know your body fat reasonably well, Katch-McArdle (based on lean mass) can be more accurate. Otherwise Mifflin-St Jeor is a well-validated default. Both are starting points — adjust from real-world weekly averages.</p></div></details>
+ </article>
+</div><aside class="sidebar"><div class="sticky"><div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h9"/></svg></div><h3>Your plan in 60 seconds</h3><p class="small muted">Answer 7 quick questions and get a personalised 6-week abs plan.</p><a class="btn btn-dark btn-block" href="abs-quiz.html">Take the quiz</a></div><div class="card" style="border-color:var(--accent)"><div class="eyebrow">1-on-1 coaching</div><h3>Want results faster?</h3><p class="small muted">Get matched with a certified coach for a free 15-minute consult. No obligation.</p><a class="btn btn-primary btn-block" href="coaching.html">Get matched free →</a></div><div class="ad-slot" data-slot="sidebar"></div></div></aside></div></section>
+{% endraw %}
