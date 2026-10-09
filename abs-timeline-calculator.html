@@ -1,0 +1,34 @@
+---
+layout: default
+title: "Abs Timeline Calculator — How Long Until My Abs Show? | AB6"
+description: "Estimate how many weeks it will take to reach six-pack body fat. Enter weight, body fat and a loss rate to see your goal weight, target date and projection chart."
+canonical: "https://ab6.com/abs-timeline-calculator.html"
+robots: "index,follow,max-image-preview:large"
+og_type: "website"
+body_attr: ""
+scripts: "<script src=\"assets/js/data.js\" defer></script><script src=\"assets/js/app.js\" defer></script><script src=\"assets/js/tools.js\" defer></script>"
+ld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebPage\", \"name\": \"Abs Timeline Calculator — How Long Until My Abs Show? | AB6\", \"description\": \"Estimate how many weeks it will take to reach six-pack body fat. Enter weight, body fat and a loss rate to see your goal weight, target date and projection chart.\", \"url\": \"https://ab6.com/abs-timeline-calculator.html\", \"isPartOf\": {\"@type\": \"WebSite\", \"name\": \"AB6.com\", \"url\": \"https://ab6.com\"}}</script>"
+---
+{% raw %}
+<section class="phero"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="calculators.html">Tools</a> / Abs Timeline</nav><div class="eyebrow">Calculator</div><h1>How long until my abs show?</h1><p class="lead">Turn your body-fat number into a date. Pick a sustainable rate and see the projected curve.</p></div></section>
+<section><div class="wrap layout"><div>
+ <div class="card">
+  <div class="unit-toggle" data-for="timelineCalc" role="group" aria-label="Units"><button type="button" class="on" data-units="metric">Metric</button><button type="button" data-units="imperial">Imperial</button></div>
+  <form id="timelineCalc" class="form" data-units="metric">
+   <div><label>Sex <span class="faint small">(formulas differ)</span></label><div class="choices"><label class="choice"><input type="radio" name="sex" value="m" required checked><span>Male</span></label><label class="choice"><input type="radio" name="sex" value="f" required><span>Female</span></label></div></div>
+   <div class="row"><div><label for="t-w">Current weight (<span data-m="kg" data-i="lb">kg</span>)</label><input id="t-w" name="weight" type="number" step="0.1" required inputmode="decimal"></div>
+   <div><label for="t-c">Current body fat %</label><input id="t-c" name="current" type="number" step="0.1" min="4" max="60" required inputmode="decimal"><span class="small"><a href="body-fat-calculator.html">Don't know it? Calculate →</a></span></div></div>
+   <div class="row"><div><label for="t-t">Target body fat %</label><input id="t-t" name="target" type="number" step="0.1" min="4" max="40" required inputmode="decimal"></div>
+   <div><label for="t-r">Rate of loss per week</label><select id="t-r" name="rate"><option value="0.5">0.5% of body weight — easiest to sustain</option><option value="0.75" selected>0.75% — balanced</option><option value="1">1% — aggressive</option></select></div></div>
+   <button class="btn btn-primary" type="submit">Show my timeline</button>
+  </form>
+  <div id="tlOut" class="result" hidden aria-live="polite"></div>
+ </div>
+ <div class="ad-slot" data-slot="inContent"></div>
+ <article class="prose" style="margin-top:30px">
+  <h2>How we estimate it</h2>
+  <p>We hold your lean mass constant, calculate the body weight at which your target body-fat % is reached, then apply your weekly loss rate to your current weight each week. Rates of roughly 0.5–1.0% of body weight per week are commonly recommended for preserving muscle while dieting (see <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Helms+2014+evidence-based+recommendations+natural+bodybuilding+contest+preparation" target="_blank" rel="noopener">Helms et al., 2014</a>).</p>
+  <div class="callout">Default targets: <b>11%</b> for men and <b>18%</b> for women — the range where most people see clear ab definition.</div>
+ </article>
+</div><aside class="sidebar"><div class="sticky"><div class="card"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2h9"/></svg></div><h3>Your plan in 60 seconds</h3><p class="small muted">Answer 7 quick questions and get a personalised 6-week abs plan.</p><a class="btn btn-dark btn-block" href="abs-quiz.html">Take the quiz</a></div><div class="card" style="border-color:var(--accent)"><div class="eyebrow">1-on-1 coaching</div><h3>Want results faster?</h3><p class="small muted">Get matched with a certified coach for a free 15-minute consult. No obligation.</p><a class="btn btn-primary btn-block" href="coaching.html">Get matched free →</a></div><div class="ad-slot" data-slot="sidebar"></div></div></aside></div></section>
+{% endraw %}
