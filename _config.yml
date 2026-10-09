@@ -1,0 +1,14 @@
+# GitHub Pages (Jekyll) config for AB6.com — pages are merged into _layouts/default.html
+title: AB6.com
+url: https://ab6.com
+exclude:
+  - build.py
+  - common.py
+  - pages_tools.py
+  - pages_learn.py
+  - pages_biz.py
+  - tools
+  - docs
+  - README.md
+  - _preview
+  - __pycache__
