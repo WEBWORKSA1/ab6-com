@@ -1,0 +1,29 @@
+---
+layout: default
+title: "Core Strength Test — Plank, Side Plank & Hollow Hold Benchmarks | AB6"
+description: "Test your core with three timed holds, get an instant grade and track your personal records on your device."
+canonical: "https://ab6.com/core-test.html"
+robots: "index,follow,max-image-preview:large"
+og_type: "website"
+body_attr: ""
+scripts: "<script src=\"assets/js/data.js\" defer></script><script src=\"assets/js/app.js\" defer></script><script src=\"assets/js/tools.js\" defer></script>"
+ld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebPage\", \"name\": \"Core Strength Test — Plank, Side Plank & Hollow Hold Benchmarks | AB6\", \"description\": \"Test your core with three timed holds, get an instant grade and track your personal records on your device.\", \"url\": \"https://ab6.com/core-test.html\", \"isPartOf\": {\"@type\": \"WebSite\", \"name\": \"AB6.com\", \"url\": \"https://ab6.com\"}}</script>"
+---
+{% raw %}
+<section class="phero"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="calculators.html">Tools</a> / Core Test</nav><div class="eyebrow">Test</div><h1>Core strength test</h1><p class="lead">Three timed holds. Instant grades. Personal records saved on this device.</p></div></section>
+<section><div class="wrap split" style="align-items:start">
+ <div class="timer" id="coreTest">
+  <div class="choices" role="radiogroup" aria-label="Choose test"><label class="choice"><input type="radio" name="test" value="plank" required checked><span>Plank</span></label><label class="choice"><input type="radio" name="test" value="side" required><span>Side plank</span></label><label class="choice"><input type="radio" name="test" value="hollow" required><span>Hollow hold</span></label></div>
+  <div class="clock" id="ctClock">0</div>
+  <button class="btn btn-primary" id="ctGo" style="min-width:160px">Start</button>
+  <p class="small muted" style="margin-top:12px">3-second countdown, then hold until form breaks. Tap Stop the moment your hips sag or your back arches.</p>
+  <div id="ctRes" class="result" hidden aria-live="polite"></div>
+ </div>
+ <div>
+  <h3>Your records</h3>
+  <div class="table-wrap"><table><thead><tr><th>Test</th><th>Fair / Strong / Elite</th><th>Best</th><th>Grade</th></tr></thead><tbody id="ctPR"></tbody></table></div>
+  <p class="small muted" style="margin-top:10px">Benchmarks are AB6 rule-of-thumb training targets, not clinical norms. Stop if you feel pain.</p>
+  <div class="ad-slot" data-slot="sidebar"></div>
+ </div>
+</div></section>
+{% endraw %}
