@@ -2,17 +2,17 @@
 
 Free, tool-first fitness site: body-fat / macro / abs-timeline calculators, workout generator with voice timer, 35-exercise library with an interactive core map, core strength test, 6-week challenge tracker with prize-draw entries, an abs-plan quiz funnel, coach-matching lead engine, YouTube video hub, gear affiliate guide, donations, contests, careers and sponsorship pages.
 
-Static HTML/CSS/vanilla JS — runs on the **GitHub Pages free plan**.
+Static HTML/CSS/vanilla JS — runs on the **GitHub Pages free plan** (GitHub's built-in Jekyll merges every page into `_layouts/default.html`; no build server needed).
 
 ## Structure
-- `build.py` — shared layout (top inquiry bar, header, footer, AdSense, consent, lead modal) → generates all pages + `sitemap.xml`.
+- `build.py` — shared layout (top inquiry bar, header, footer, AdSense, consent, lead modal) → writes `_layouts/default.html`, one Jekyll page per `*.html` (front matter + body) and `sitemap.xml`. `python3 build.py --preview` also writes fully rendered pages to `_preview/` for local testing.
 - `pages_tools.py`, `pages_learn.py`, `pages_biz.py` — page content. `common.py` — shared snippets.
 - `assets/js/app.js` — `SITE` config, form delivery, nav, theme, consent, modal, YouTube, donations.
 - `assets/js/tools.js` — calculators, quiz, library, generator, timer, core test, challenge.
 - `assets/js/data.js` — exercise database + video list.
 - `docs/PROMPTS.md` — phase-wise build prompt. `docs/RESEARCH.md` — concept decision, market data, 36-site teardown.
 
-Edit content in `pages_*.py`, run `python3 build.py` (and `pip install pillow && python3 tools/make_images.py` to regenerate the PNG icons / social card), then commit the generated `*.html`, `sitemap.xml` and images.
+Edit content in `pages_*.py`, run `python3 build.py` (and `pip install pillow && python3 tools/make_images.py` to regenerate the PNG icons / social card), then commit the generated `*.html`, `_layouts/default.html`, `sitemap.xml` and images. You can also edit a page's HTML body directly on GitHub — it stays inside the `{% raw %}` block.
 
 ## Launch checklist
 1. **GitHub Pages:** Settings → Pages → Build and deployment → *Deploy from a branch* → `main` / `(root)`.
