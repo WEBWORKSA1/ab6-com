@@ -1,0 +1,37 @@
+---
+layout: default
+title: "Ab Workout Generator + Interval Timer (5–30 Min) | AB6"
+description: "Generate a custom ab workout for your time, level and equipment, then follow it with a built-in voice interval timer. Free, no sign-up."
+canonical: "https://ab6.com/workout-generator.html"
+robots: "index,follow,max-image-preview:large"
+og_type: "website"
+body_attr: ""
+scripts: "<script src=\"assets/js/data.js\" defer></script><script src=\"assets/js/app.js\" defer></script><script src=\"assets/js/tools.js\" defer></script>"
+ld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebPage\", \"name\": \"Ab Workout Generator + Interval Timer (5–30 Min) | AB6\", \"description\": \"Generate a custom ab workout for your time, level and equipment, then follow it with a built-in voice interval timer. Free, no sign-up.\", \"url\": \"https://ab6.com/workout-generator.html\", \"isPartOf\": {\"@type\": \"WebSite\", \"name\": \"AB6.com\", \"url\": \"https://ab6.com\"}}</script>"
+---
+{% raw %}
+<section class="phero"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="calculators.html">Tools</a> / Workout Generator</nav><div class="eyebrow">Tool</div><h1>Ab workout generator</h1><p class="lead">Pick time, level and gear. Get a balanced core circuit and a voice-guided timer — ready in one tap.</p></div></section>
+<section><div class="wrap split" style="align-items:start">
+ <div class="card">
+  <form id="genForm" class="form">
+   <div><label>Time</label><div class="choices"><label class="choice"><input type="radio" name="minutes" value="5" required><span>5 min</span></label><label class="choice"><input type="radio" name="minutes" value="10" required checked><span>10 min</span></label><label class="choice"><input type="radio" name="minutes" value="15" required><span>15 min</span></label><label class="choice"><input type="radio" name="minutes" value="20" required><span>20 min</span></label><label class="choice"><input type="radio" name="minutes" value="30" required><span>30 min</span></label></div></div>
+   <div><label>Level</label><div class="choices"><label class="choice"><input type="radio" name="level" value="1" required checked><span>Beginner<em>30s on / 20s off</em></span></label><label class="choice"><input type="radio" name="level" value="2" required><span>Intermediate<em>40s / 20s</em></span></label><label class="choice"><input type="radio" name="level" value="3" required><span>Advanced<em>45s / 15s</em></span></label></div></div>
+   <div><label>Focus</label><select name="focus"><option value="balanced">Balanced six-pack</option><option value="lower">Lower abs</option><option value="obliques">Obliques</option><option value="deep">Deep core / stability</option><option value="upper">Upper abs</option></select></div>
+   <div><label>Equipment <span class="faint small">(bodyweight always included)</span></label><div class="choices"><label class="choice"><input type="checkbox" name="eq" value="band"><span>Band</span></label><label class="choice"><input type="checkbox" name="eq" value="dumbbell"><span>Dumbbell / KB</span></label><label class="choice"><input type="checkbox" name="eq" value="bar"><span>Pull-up bar</span></label><label class="choice"><input type="checkbox" name="eq" value="wheel"><span>Ab wheel</span></label><label class="choice"><input type="checkbox" name="eq" value="bench"><span>Bench</span></label><label class="choice"><input type="checkbox" name="eq" value="cable"><span>Cables</span></label><label class="choice"><input type="checkbox" name="eq" value="ball"><span>Stability ball</span></label></div></div>
+   <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-primary" type="submit">Generate workout</button><button class="btn btn-ghost" type="button" id="usePicks">Use my library picks</button></div>
+  </form>
+ </div>
+ <div>
+  <div id="timer" class="timer" hidden aria-live="polite">
+   <div class="now">Press start</div><div class="clock">GO</div><div class="next"></div>
+   <div class="ctrl"><button class="btn btn-primary" id="tStart">Start</button><button class="btn btn-dark" id="tSkip">Skip ›</button><button class="btn btn-ghost" id="tReset">Reset</button><button class="btn btn-ghost btn-sm" id="voiceBtn" type="button">🔊 Voice on</button></div>
+  </div>
+  <div id="genOut" style="margin-top:18px"><p class="muted">Your workout will appear here. Tip: add favourites in the <a href="exercises.html">exercise library</a>, then hit “Use my library picks”.</p></div>
+ </div>
+</div><div class="ad-slot" data-slot="inContent"></div></section>
+<section class="alt"><div class="wrap prose">
+ <h2>How the generator builds your circuit</h2>
+ <p>Each workout pulls from the AB6 exercise library and balances the four jobs your core does: flexion (crunch patterns), hip flexion with posterior tilt (lower abs), rotation and anti-rotation (obliques), and anti-extension (deep core). Work and rest intervals scale with your level, and rounds are calculated to fit your time.</p>
+ <p>Keep your phone screen on — the timer requests a wake lock where supported and calls out each exercise.</p>
+</div></section>
+{% endraw %}

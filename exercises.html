@@ -1,0 +1,45 @@
+---
+layout: default
+title: "Ab Exercise Library — 35 Core Exercises with Interactive Muscle Map | AB6"
+description: "Browse 35 ab and core exercises by muscle, level and equipment. Step-by-step form, coaching cues, common mistakes and video demos."
+canonical: "https://ab6.com/exercises.html"
+robots: "index,follow,max-image-preview:large"
+og_type: "website"
+body_attr: ""
+scripts: "<script src=\"assets/js/data.js\" defer></script><script src=\"assets/js/app.js\" defer></script><script src=\"assets/js/tools.js\" defer></script>"
+ld: "<script type=\"application/ld+json\">{\"@context\": \"https://schema.org\", \"@type\": \"WebPage\", \"name\": \"Ab Exercise Library — 35 Core Exercises with Interactive Muscle Map | AB6\", \"description\": \"Browse 35 ab and core exercises by muscle, level and equipment. Step-by-step form, coaching cues, common mistakes and video demos.\", \"url\": \"https://ab6.com/exercises.html\", \"isPartOf\": {\"@type\": \"WebSite\", \"name\": \"AB6.com\", \"url\": \"https://ab6.com\"}}</script>"
+---
+{% raw %}
+<section class="phero"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> / Exercise Library</nav><div class="eyebrow">Library</div><h1>Ab exercise library</h1><p class="lead">Tap the core map or filter by level and equipment. Every exercise has steps, a coaching cue and the #1 mistake to avoid.</p></div></section>
+<section><div class="wrap layout">
+ <div>
+  <div class="lib-tools">
+   <select id="fArea" aria-label="Muscle area"><option value="">All areas</option><option value="upper">Upper abs</option><option value="lower">Lower abs</option><option value="obliques">Obliques</option><option value="deep">Deep core</option><option value="back">Lower back</option></select>
+   <select id="fLevel" aria-label="Level"><option value="">All levels</option><option value="1">Beginner</option><option value="2">Intermediate</option><option value="3">Advanced</option></select>
+   <select id="fEq" aria-label="Equipment"><option value="">All equipment</option><option value="none">Bodyweight</option><option value="mat">Mat / sliders</option><option value="band">Band</option><option value="dumbbell">Dumbbell / KB</option><option value="wheel">Ab wheel</option><option value="bar">Pull-up bar</option><option value="cable">Cable</option><option value="ball">Stability ball</option><option value="bench">Bench</option></select>
+   <input id="fQ" type="search" placeholder="Search…" aria-label="Search exercises">
+  </div>
+  <p class="small muted"><span id="libCount"></span> · <a href="workout-generator.html">My workout: <b id="pickCount">0</b> picked → open generator</a></p>
+  <div id="library" class="grid g2"></div>
+  <div class="ad-slot" data-slot="inContent"></div>
+ </div>
+ <aside class="sidebar"><div class="sticky"><div class="coremap">
+ <svg viewBox="0 0 200 300" role="group" aria-label="Interactive core muscle map — select a region to filter exercises">
+  <path class="body" d="M60 18 Q100 4 140 18 L152 62 Q160 140 152 200 Q150 250 132 288 L68 288 Q50 250 48 200 Q40 140 48 62 Z"/>
+  <path class="zone" data-area="obliques" tabindex="0" role="button" aria-label="Obliques" d="M54 82 Q48 140 56 200 L72 212 L72 92 Z"><title>Obliques</title></path>
+  <path class="zone" data-area="obliques" tabindex="-1" aria-hidden="true" d="M146 82 Q152 140 144 200 L128 212 L128 92 Z"/>
+  <rect class="zone" data-area="upper" tabindex="0" role="button" aria-label="Upper abs" x="77" y="68" width="21" height="32" rx="6"><title>Upper abs</title></rect>
+  <rect class="zone" data-area="upper" tabindex="-1" aria-hidden="true" x="102" y="68" width="21" height="32" rx="6"/>
+  <rect class="zone" data-area="upper" tabindex="-1" aria-hidden="true" x="77" y="105" width="21" height="32" rx="6"/>
+  <rect class="zone" data-area="upper" tabindex="-1" aria-hidden="true" x="102" y="105" width="21" height="32" rx="6"/>
+  <rect class="zone" data-area="lower" tabindex="0" role="button" aria-label="Lower abs" x="77" y="142" width="21" height="32" rx="6"><title>Lower abs</title></rect>
+  <rect class="zone" data-area="lower" tabindex="-1" aria-hidden="true" x="102" y="142" width="21" height="32" rx="6"/>
+  <path class="zone" data-area="lower" tabindex="-1" aria-hidden="true" d="M77 179 L98 179 L98 238 Q86 230 77 212 Z"/>
+  <path class="zone" data-area="lower" tabindex="-1" aria-hidden="true" d="M102 179 L123 179 L123 212 Q114 230 102 238 Z"/>
+  <path class="zone" data-area="deep" tabindex="0" role="button" aria-label="Deep core" d="M58 246 Q100 262 142 246 L136 268 Q100 282 64 268 Z"><title>Deep core (transversus abdominis)</title></path>
+ </svg>
+ <div class="legend"><button type="button" data-area="upper">Upper abs</button><button type="button" data-area="lower">Lower abs</button><button type="button" data-area="obliques">Obliques</button><button type="button" data-area="deep">Deep core</button><button type="button" data-area="back">Lower back</button></div>
+ <p class="small muted" style="margin:10px 0 0">Tap a muscle to filter. Tap again to clear.</p>
+</div><div class="ad-slot" data-slot="sidebar"></div></div></aside>
+</div></section>
+{% endraw %}
