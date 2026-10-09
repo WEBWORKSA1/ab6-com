@@ -12,10 +12,10 @@ Static HTML/CSS/vanilla JS — runs on the **GitHub Pages free plan**.
 - `assets/js/data.js` — exercise database + video list.
 - `docs/PROMPTS.md` — phase-wise build prompt. `docs/RESEARCH.md` — concept decision, market data, 36-site teardown.
 
-Edit content in `pages_*.py` and push — the **Build site** GitHub Action runs `python build.py` and `tools/make_images.py` and commits the generated `*.html` and images automatically. (Locally: `python3 build.py`.)
+Edit content in `pages_*.py`, run `python3 build.py` (and `pip install pillow && python3 tools/make_images.py` to regenerate the PNG icons / social card), then commit the generated `*.html`, `sitemap.xml` and images.
 
 ## Launch checklist
-1. **GitHub Pages:** Settings → Pages → Build and deployment → *Deploy from a branch* → `main` / `(root)` (or `gh-pages` if it was auto-enabled; the workflow keeps `gh-pages` in sync with `main`).
+1. **GitHub Pages:** Settings → Pages → Build and deployment → *Deploy from a branch* → `main` / `(root)`.
 2. **Custom domain:** DNS A records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`; `www` CNAME → `webworksa1.github.io`. Then enter `ab6.com` in Pages settings and tick *Enforce HTTPS*.
 3. **Forms:** submit any form once on the live site and click the activation link FormSubmit sends to the owner inbox (the address is encoded in `app.js` and never shown on the site).
 4. **AdSense:** add the site in AdSense (`ads.txt` included). Optional manual units: fill `SITE.adSlots` in `app.js`. Enable a Google-certified CMP for EEA/UK/CH traffic.
@@ -23,6 +23,7 @@ Edit content in `pages_*.py` and push — the **Build site** GitHub Action runs 
 6. **Donations:** add PayPal / Stripe / Buy Me a Coffee / Ko-fi / Patreon links to `SITE.donate` (the pledge form works without them).
 7. **Affiliate:** set your Amazon Associates tag in `SITE.amazonTag`.
 8. Submit `sitemap.xml` in Google Search Console.
+9. **Images:** if `assets/img/og.png`, `icon-192.png` or `icon-512.png` are missing, run `tools/make_images.py` and commit them (Add file → Upload files works too).
 
 ## Legal
 “AB6” is used only as a descriptive reading of the domain (“Ab Six”). AB6.com claims no trademark rights in “AB6” and is not affiliated with AB6IX, Brand New Music, AB6 Holdings LLC or any brand using “AB6”. See `disclaimer.html`. © AB6.com — original content and code all rights reserved; embedded videos belong to their creators.
